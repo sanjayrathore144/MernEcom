@@ -3,22 +3,23 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var ObjectId = require('mongodb').ObjectId;
 var MongoClient = require('mongodb').MongoClient;
+var authRouter = require('./routes/auth-routes');
+var userRouter = require('./routes/user-routes');
 
-// Below is the Route that will handle all api's from /user/
-var userRouter = require("./routes/user-routes");  
 
 var app = express();
 
 app.use(cors());
-
-var Client = new MongoClient('mongodb+srv://mernecom:mernecom@cluster0.wtjik.mongodb.net/mernecom?retryWrites=true&w=majority');
+app.use('/auth' , authRouter);
+app.use('/user' , userRouter);
+var Client = new MongoClient('mongodb+srv://mernecom:mernecom@cluster0.wtjik.mongodb.net/mern_ecom?retryWrites=true&w=majority');
 
 var connection; 
 
 Client.connect((err,db)=>{
     if(!err)
     {
-        connection=db;
+        connection = db;
         console.log("Database connected sucessfully");
     }
     else
@@ -28,36 +29,38 @@ Client.connect((err,db)=>{
 })
 
 
-app.use('/user',userRouter);
+app.get('/user',(req,res)=>{
+    var productdatabase = connection.db('mern_ecom').collection('user');
+    productdatabase.find().toArray((err,docs)=>{
+        if(!err)
+        {
+            res.send({status:"ok",data:docs});
+        }
+        else
+        {
+            res.send({status:"failed",data:err});
+        }
+    })
+})
 
-// app.get('/user',(req,res)=>{
-//     var productdatabase = connection.db('mern_ecom').collection('user');
-//     productdatabase.find().toArray((err,docs)=>{
-//         if(!err)
-//         {
-//             res.send({status:"ok",data:docs});
-//         }
-//         else
-//         {
-//             res.send({status:"failed",data:err});
-//         }
-//     })
-// })
+app.get('/user/:id',(req,res)=>{
+    var productdatabase = connection.db('mern_ecom').collection('user');
+    productdatabase.find({_id:ObjectId(req.params.id)}).toArray((err,docs)=>{
+        if(!err)
+        {
+            res.send({status:"ok",data:docs});
+        }
+        else
+        {
+            res.send({status:"failed",data:err});
+        }
+    })
+}) 
 
-// app.get('/user/:id',(req,res)=>{
-//     var productdatabase = connection.db('mern_ecom').collection('user');
-//     productdatabase.find({_id:ObjectId(req.params.id)}).toArray((err,docs)=>{
-//         if(!err)
-//         {
-//             res.send({status:"ok",data:docs});
-//         }
-//         else
-//         {
-//             res.send({status:"failed",data:err});
-//         }
-//     })
-// }) 
 
-app.listen(3001,()=>{
-    console.log("Server running on port 3001");
+
+
+
+app.listen(3000,()=>{
+    console.log("Server running on port 3000");
 })
