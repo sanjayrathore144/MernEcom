@@ -107,6 +107,9 @@ customer:
                      seller
                      brand name
                      deliveryCharge
+                     attributes:[
+                        {attr_name:"memory",attr_value:"4",unit:"Gb"}
+                     ]
                      validcoups:[{code:xxxxxx, 
                                   discount:, 		  
                                   expiryDate,

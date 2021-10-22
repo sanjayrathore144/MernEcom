@@ -5,13 +5,16 @@ var ObjectId = require('mongodb').ObjectId;
 var MongoClient = require('mongodb').MongoClient;
 var authRouter = require('./routes/auth-routes');
 var userRouter = require('./routes/user-routes');
-
+var categoryRouter = require('./routes/categorie-routes');
+var createSubcategoryRouter = require('./routes/subcategory');
 
 var app = express();
 
 app.use(cors());
 app.use('/auth' , authRouter);
 app.use('/user' , userRouter);
+app.use('/categories' , categoryRouter);
+app.use('/subcategory' , createSubcategoryRouter);
 var Client = new MongoClient('mongodb+srv://mernecom:mernecom@cluster0.wtjik.mongodb.net/mern_ecom?retryWrites=true&w=majority');
 
 var connection; 
