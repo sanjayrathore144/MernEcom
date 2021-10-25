@@ -7,11 +7,13 @@ var authRouter = require('./routes/auth-routes');
 var userRouter = require('./routes/user-routes');
 var categoryRouter = require('./routes/categorie-routes');
 var createSubcategoryRouter = require('./routes/subcategory');
+var ProductRouter = require('./routes/product-route');
 
 var app = express();
 
 app.use(cors());
 app.use('/auth' , authRouter);
+app.use('/product',ProductRouter);
 app.use('/user' , userRouter);
 app.use('/categories' , categoryRouter);
 app.use('/subcategory' , createSubcategoryRouter);
