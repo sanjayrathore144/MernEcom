@@ -32,7 +32,7 @@ function CreateProduct() {
         e.target.name==="Voucher" && setVoucher(e.target.value);
     }
 
-    function sendData(){
+    function sendDataProduct(){
         var p = {
             title , price , image, qty, description ,rating, discount, seller, brand_name, delivery_charge, attribute, voucher
         }
@@ -138,7 +138,7 @@ function CreateProduct() {
 
             <div class="row">
               <div class="col-12">
-                <button type="button" class="btn btn-primary" onClick={sendData}>Submit</button>
+                <button type="button" class="btn btn-primary" onClick={sendDataProduct}>Submit</button>
               </div>
             </div>
           </form>
