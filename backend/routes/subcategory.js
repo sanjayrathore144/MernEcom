@@ -9,7 +9,7 @@ var app = express();
 
 app.use(cors());
 
-var Client = new MongoClient('mongodb+srv://mernecom:mernecom@cluster0.wtjik.mongodb.net/mernecom?retryWrites=true&w=majority');
+var Client = new MongoClient('mongodb+srv://mernecom:mernecom@cluster0.wtjik.mongodb.net/mern_ecom?retryWrites=true&w=majority');
 
 var connection; 
 
@@ -29,11 +29,11 @@ Client.connect((err,db)=>{
 Router.post('/create',bodyParser.json(),(req,res)=>{
     var productdatabase = connection.db('mern_ecom').collection('subcategory');
     console.log("asdas");
-    productdatabase.insert(req.body,(err,docs)=>{
+    productdatabase.insert(req.body,(err,result)=>{
         console.log("before if");
         if(!err)
         {
-            res.send({status:"ok",data:docs});
+            res.send({status:"ok",data:"Subcategory created Successfully"});
         }
         else
         {
