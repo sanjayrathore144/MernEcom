@@ -5,46 +5,45 @@ import $ from 'jquery';
 export class Header extends Component {
 
     componentDidMount(){
+
         var $= window.$;
+
         (function ($) {
             
             "use strict";
         
-            // hide perloader
-            // window.onload = function () {
-            //     $('.preloader').fadeOut(500, function(){ $('.preloader').remove(); } );
-            // }
+           
         
-            // Mobile menu
-            $('#mob_menubar').on('click', function () {
-                $('#mob_menu').toggleClass('active')
-            })
+            // // Mobile menu
+            // $('#mob_menubar').on('click', function () {
+            //     $('#mob_menu').toggleClass('active')
+            // })
         
-            // product filter in mobile
-            $('#mobile_filter_btn').on('click', function () {
-                $('.filter_box').toggleClass('active')
-            })
+            // // product filter in mobile
+            // $('#mobile_filter_btn').on('click', function () {
+            //     $('.filter_box').toggleClass('active')
+            // })
         
-            $('.close_filter').on('click', function () {
-                $('.filter_box').removeClass('active')
-            })
+            // $('.close_filter').on('click', function () {
+            //     $('.filter_box').removeClass('active')
+            // })
         
-            // search for mobile
-            $('#src_icon').on('click', function () {
-                $('.mobile_search_bar').addClass('active')
-            })
+            // // search for mobile
+            // $('#src_icon').on('click', function () {
+            //     $('.mobile_search_bar').addClass('active')
+            // })
         
-            $('#close_mbsearch').on('click', function () {
-                $('.mobile_search_bar').removeClass('active')
-            })
+            // $('#close_mbsearch').on('click', function () {
+            //     $('.mobile_search_bar').removeClass('active')
+            // })
         
-            // payment method switch
-            $('.single_payment_method').on('click', function () {
-                let getCls = $(this).attr('data-target')
-                $('.single_payment_method, .payment_methods').removeClass('active')
-                $(getCls).addClass('active')
-                $(this).addClass('active')
-            })
+            // // payment method switch
+            // $('.single_payment_method').on('click', function () {
+            //     let getCls = $(this).attr('data-target')
+            //     $('.single_payment_method, .payment_methods').removeClass('active')
+            //     $(getCls).addClass('active')
+            //     $(this).addClass('active')
+            // })
         
             // // nice selector
             // $('.nice_select').niceSelect();
@@ -303,99 +302,99 @@ export class Header extends Component {
             //     $('#mobileCart').removeClass('active')
             // })
         
-            // // outside click handle
-            // $(document).on('click', function(e){
-            //     if(e.target.id==='mobile_menwrap'){
-            //         $('#mobile_menwrap').removeClass('active')
-            //     }
-            //     if(e.target.id==='mobile_catwrap'){
-            //         $('#mobile_catwrap').removeClass('active')
-            //         $('.singlecats').removeClass('active')
-            //         $('.mega_menu_wrap').removeClass('active')
-            //     }
-            //     if(e.target.classList.contains('product_quickview')){
-            //         $('.product_quickview').removeClass('active');
-            //         $('body').css('overflow-y', 'auto')
-            //     }
-            //     if(e.target.classList.contains('popup_wrap')){
-            //         $('.popup_wrap').removeClass('active');
-            //         $('body').css('overflow-y', 'auto')
-            //     }
-            //     if(e.target.id==='mobileCart'){
-            //         $('#mobileCart').removeClass('active');
-            //     }
+        //     // outside click handle
+        //     $(document).on('click', function(e){
+        //         if(e.target.id==='mobile_menwrap'){
+        //             $('#mobile_menwrap').removeClass('active')
+        //         }
+        //         if(e.target.id==='mobile_catwrap'){
+        //             $('#mobile_catwrap').removeClass('active')
+        //             $('.singlecats').removeClass('active')
+        //             $('.mega_menu_wrap').removeClass('active')
+        //         }
+        //         if(e.target.classList.contains('product_quickview')){
+        //             $('.product_quickview').removeClass('active');
+        //             $('body').css('overflow-y', 'auto')
+        //         }
+        //         if(e.target.classList.contains('popup_wrap')){
+        //             $('.popup_wrap').removeClass('active');
+        //             $('body').css('overflow-y', 'auto')
+        //         }
+        //         if(e.target.id==='mobileCart'){
+        //             $('#mobileCart').removeClass('active');
+        //         }
         
-            //     $('.acprof_wrap').removeClass('active')
-            // })
+        //         $('.acprof_wrap').removeClass('active')
+        //     })
         
-            // // my account sidebar
-            // $('.profile_hambarg').on('click', function(e){
-            //     e.stopPropagation();
-            //     $('.acprof_wrap').toggleClass('active')
-            // })
+        //     // my account sidebar
+        //     $('.profile_hambarg').on('click', function(e){
+        //         e.stopPropagation();
+        //         $('.acprof_wrap').toggleClass('active')
+        //     })
         
-            // $('.acprof_wrap').on('click', function(e){
-            //     e.stopPropagation();
-            // })
+        //     $('.acprof_wrap').on('click', function(e){
+        //         e.stopPropagation();
+        //     })
         
-            // // product quick view
-            // $('.open_quickview').on('click', function(){
-            //     $('.product_quickview').addClass('active');
-            //     $('body').css('overflow-y', 'hidden')
-            // })
+        //     // product quick view
+        //     $('.open_quickview').on('click', function(){
+        //         $('.product_quickview').addClass('active');
+        //         $('body').css('overflow-y', 'hidden')
+        //     })
         
-            // $('.close_quickview').on('click', function(){
-            //     $('.product_quickview').removeClass('active');
-            //     $('body').css('overflow-y', 'auto')
-            // })
+        //     $('.close_quickview').on('click', function(){
+        //         $('.product_quickview').removeClass('active');
+        //         $('body').css('overflow-y', 'auto')
+        //     })
         
-            // // mobile submenu
-            // $('.mobile_menu_2 .withsub').on('click', function(){
-            //     if($(this).hasClass('active')){
-            //         $('.mobile_menu_2 .withsub').removeClass('active')
-            //     }else{
-            //         $('.mobile_menu_2 .withsub').removeClass('active')
-            //         $(this).addClass('active')
-            //     }
-            // })
+        //     // mobile submenu
+        //     $('.mobile_menu_2 .withsub').on('click', function(){
+        //         if($(this).hasClass('active')){
+        //             $('.mobile_menu_2 .withsub').removeClass('active')
+        //         }else{
+        //             $('.mobile_menu_2 .withsub').removeClass('active')
+        //             $(this).addClass('active')
+        //         }
+        //     })
         
-            // // popup show
-            // setTimeout(function(){
-            //     $('.popup_wrap').addClass('active')
-            // }, 2000)
+        //     // popup show
+        //     setTimeout(function(){
+        //         $('.popup_wrap').addClass('active')
+        //     }, 2000)
             
-            // $('.close_popup').on('click', function(){
-            //     $('.popup_wrap').removeClass('active')
-            // })
+        //     $('.close_popup').on('click', function(){
+        //         $('.popup_wrap').removeClass('active')
+        //     })
         
-            // timer
-            //count down
-            function startTimer(duration) {
-                var timer = duration, minutes, seconds;
-                setInterval(function () {
-                    minutes = parseInt(timer / 60, 10)
-                    seconds = parseInt(timer % 60, 10);
+        //     // timer
+        //     //count down
+        //     function startTimer(duration) {
+        //         var timer = duration, minutes, seconds;
+        //         setInterval(function () {
+        //             minutes = parseInt(timer / 60, 10)
+        //             seconds = parseInt(timer % 60, 10);
         
-                    minutes = minutes < 10 ? "0" + minutes : minutes;
-                    seconds = seconds < 10 ? "0" + seconds : seconds;
+        //             minutes = minutes < 10 ? "0" + minutes : minutes;
+        //             seconds = seconds < 10 ? "0" + seconds : seconds;
         
-                    $('#count_minute').text(minutes)
-                    $('#count_second').text(seconds)
+        //             $('#count_minute').text(minutes)
+        //             $('#count_second').text(seconds)
         
-                    if (--timer < 0) {
-                        timer = duration;
-                    }
+        //             if (--timer < 0) {
+        //                 timer = duration;
+        //             }
         
-                }, 1000);
-            }
+        //         }, 1000);
+        //     }
         
-            startTimer(2000)
+        //     startTimer(2000)
         
-            // // activate bootstrap tooltip
-            // var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-            // var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            // return new bootstrap.Tooltip(tooltipTriggerEl)
-            // })
+        //     // activate bootstrap tooltip
+        //     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        //     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        //     return new bootstrap.Tooltip(tooltipTriggerEl)
+        //     })
 
         })($);
         
@@ -419,7 +418,7 @@ export class Header extends Component {
       <div class="tophead_items">
           <a href="track-order.html">Track My Order</a>
           <div class="ms-3">
-              <Link to="/admin"><a class="me-0">Login</a><span class="text_xs">/</span><a >Register</a></Link>
+              <Link to="/dashboard"><a class="me-0">Login</a><span class="text_xs">/</span><a >Register</a></Link>
           </div>
           <div class="ms-3">
               <select class="nice_select">
@@ -906,7 +905,7 @@ export class Header extends Component {
 
                   <li> <Link to="/listofproduct"><a>List view</a></Link></li>
                   <li><Link to="/cart"><a >Shopping cart</a></Link></li>
-                  <li><Link to="/product"><a>Product view</a></Link></li>
+                  <li><Link to="/productview"><a>Product view</a></Link></li>
               </ul>
           </li>
          

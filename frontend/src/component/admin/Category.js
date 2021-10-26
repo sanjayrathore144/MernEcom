@@ -3,18 +3,18 @@ import axios from 'axios';
 
 function Category() {
 
-  const [categories, setCategories] = useState([]);
+  const [category, setCategory] = useState([]);
 
   useEffect(() => {
     axios.get('http://localhost:3000/categories').then(
       (res)=>{
         console.log(res.data.data);
-        setCategories(res.data.data)
+        setCategory(res.data.data)
       }
     )
     }, [])
 
-    var categoryList = categories.map((ct) => { 
+    var categoryList = category.map((ct) => { 
       return  <tr key = {ct._id} > 
   <td>{ct.srno}</td>
   <td>{ct.name}</td>

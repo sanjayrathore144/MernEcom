@@ -1,33 +1,44 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import Category from './Category'
 import CreateProduct from './CreateProduct'
 import Dashboard from './Dashboard'
+
 import ListProduct from './ListProduct'
 import Sidebar from './Sidebar'
 import SubCategory from './SubCategory'
 
 
-function RouterAdmin() {
+function RouterDashboard() {
     return (
         <React.Fragment>
             
           
-        <Router>
+     
       <Sidebar/>
             <Switch>
             
-            <Route path='/admin' exact component={Dashboard}/>
-            <Route path='/categories' exact component={Category}/>
-            <Route path='/subcategory' exact component={SubCategory}/>
-            <Route path='/product' exact component={ListProduct}/>
-            <Route path='/create_product' exact component={CreateProduct}/>
+           
+            {/* <Route path='/dashboard' exact component={Dashboard}/>
+            <Route path='/categories'  component={Category}/>
+            <Route path='/subcategory' component={SubCategory}/>
+            <Route path='/product'  component={ListProduct}/>
+            <Route path='/product/create'  component={CreateProduct}/> */}
+            {/* <Redirect from="/dashboard" to="/categories" component={Category}/> */}
+
+            {/* <Redirect from="/dashboard" to="/categories" />
+  <Route path="/categories" exact component={Category}>
+  
+  </Route>  */}
+  
+ 
+
             </Switch>
           
-        </Router>
+        
        
     </React.Fragment>
     )
 }
 
-export default RouterAdmin
+export default RouterDashboard

@@ -31,6 +31,9 @@ function SubCategory() {
 
     
 
+   
+    
+
 
 
     return (
@@ -72,7 +75,10 @@ function SubCategory() {
               <label for="inputcategory">Select Category</label>
               <select class="form-control select2" id="inputcategory" name="Category" value={category} onChange={(e)=>{setValue(e);}}>
               <option value="">Select Category Option</option>
-                <option value="electronics">Electronics</option>
+              {/* {category.map((ct)=>{
+                return  <option>{ct.name}</option>
+              })} */}
+                
                 <option value="grocery">Grocery</option>
                 <option value="fashion">Fashion</option>
                 <option value="footwear">Footwear</option>
