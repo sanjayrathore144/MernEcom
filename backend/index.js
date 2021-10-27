@@ -3,19 +3,28 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var ObjectId = require('mongodb').ObjectId;
 var MongoClient = require('mongodb').MongoClient;
+var authRouter = require('./routes/auth-routes');
+var userRouter = require('./routes/user-routes');
+var categoryRouter = require('./routes/categorie-routes');
+var createSubcategoryRouter = require('./routes/subcategory');
+var ProductRouter = require('./routes/product-route');
 
 var app = express();
 
 app.use(cors());
-
-var Client = new MongoClient('mongodb+srv://mernecom:mernecom@cluster0.wtjik.mongodb.net/mernecom?retryWrites=true&w=majority');
+app.use('/auth' , authRouter);
+app.use('/product',ProductRouter);
+app.use('/user' , userRouter);
+app.use('/categories' , categoryRouter);
+app.use('/subcategory' , createSubcategoryRouter);
+var Client = new MongoClient('mongodb+srv://mernecom:mernecom@cluster0.wtjik.mongodb.net/mern_ecom?retryWrites=true&w=majority');
 
 var connection; 
 
 Client.connect((err,db)=>{
     if(!err)
     {
-        connection=db;
+        connection = db;
         console.log("Database connected sucessfully");
     }
     else
@@ -23,6 +32,7 @@ Client.connect((err,db)=>{
         console.log("Database could not connect successfully");
     }
 })
+
 
 app.get('/user',(req,res)=>{
     var productdatabase = connection.db('mern_ecom').collection('user');
@@ -52,6 +62,10 @@ app.get('/user/:id',(req,res)=>{
     })
 }) 
 
-app.listen(3001,()=>{
-    console.log("Server running on port 3001");
+
+
+
+
+app.listen(3000,()=>{
+    console.log("Server running on port 3000");
 })

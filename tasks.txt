@@ -9,6 +9,11 @@ To Access List of All Users
 to Access a User by Id
 /user/:id  get
 
+/product/create - Create product (post)
+/product - get all products (get)
+/product/:id - get particular product details
+
+
 
 
 1. create data in mongodb Atlas 
