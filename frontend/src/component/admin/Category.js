@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Sidebar from './Sidebar';
 
 function Category() {
 
@@ -31,7 +32,7 @@ function Category() {
 
     return (
         <React.Fragment>
-            
+           {/* <Sidebar/>  */}
     <div class="app-content content">
       <div class="content-overlay"></div>
       <div class="content-wrapper">

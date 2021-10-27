@@ -310,7 +310,8 @@ export class Sidebar extends Component {
 </div>
 
 <Switch>
-          <Route exact path='/dashboard' component = {Dashboard}/> 
+  
+          {/* <Route exact path='/dashboard' component = {Dashboard}/>  */}
           <Route exact path='/dashboard/categories'  component = {Category}/>
           <Route exact path='/dashboard/subcategory' component = {SubCategory}/>
           <Route exact path='/dashboard/product'  component = {ListProduct}/>

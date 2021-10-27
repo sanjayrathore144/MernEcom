@@ -1,9 +1,10 @@
 import React from 'react'
+import Sidebar from './Sidebar'
 
 function Dashboard() {
     return (
         <React.Fragment>
-            
+            <Sidebar/>
             <div class="app-content content">
   <div class="content-overlay"></div>
   <div class="content-wrapper">

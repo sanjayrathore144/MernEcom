@@ -17,9 +17,7 @@ function App() {
       <Router>
            
                 <Switch>
-                <Route exact path='/dashboard' component={Sidebar}/>
-                <Route exact path='/dashboard/categories' component={Category}/>
-                <Route exact path='/dashboard/subcategory' component = {SubCategory}/>
+                <Route  path='/dashboard' component={Sidebar}/>
                 <Route path='/' component={RouterPage}/>
                 </Switch>
 
