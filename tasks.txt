@@ -10,3 +10,15 @@ to Access a User by Id
 /user/:id  get
 
 
+
+1. create data in mongodb Atlas 
+     name, description, tumbnail
+2. create rest end point 
+   /categories   get
+   to get all categories objects
+3. create rest end point 
+  /create-subcategory post
+  input { category, subcategory-name, }
+
+
+

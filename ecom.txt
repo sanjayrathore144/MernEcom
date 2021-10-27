@@ -91,9 +91,9 @@ customer:
 	          toys
 	          sports
 ##### subcategories
-                         category_name
+                         {category_name
                          subcategory_name
-                         attributes:[{attr_name:"ram", units:[mb,gb]},{},{}]
+                         attributes:[{attr_name:"RAM", units:[mb,gb]},{},{}]}
                             
              
 ##### products 
