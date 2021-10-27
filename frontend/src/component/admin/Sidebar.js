@@ -5,7 +5,7 @@ import Category from './Category';
 import CreateProduct from './CreateProduct';
 import Dashboard from './Dashboard';
 import SubCategory from './SubCategory';
-import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'
+import { Route, Switch, NavLink } from 'react-router-dom'
 import ListProduct from './ListProduct';
 import RouterDashboard from './RouterAdmin';
 
@@ -123,13 +123,13 @@ export class Sidebar extends Component {
       <div className="navbar-collapse" id="navbar-mobile">
         <div className="mr-auto float-left bookmark-wrapper d-flex align-items-center">
           <ul className="nav navbar-nav">
-            <li className="nav-item mobile-menu d-xl-none mr-auto"><a className="nav-link nav-menu-main menu-toggle hidden-xs" href="javascript:void(0);"><i className="ficon bx bx-menu"></i></a></li>
+            <li className="nav-item mobile-menu d-xl-none mr-auto"><a className="nav-link nav-menu-main menu-toggle hidden-xs" title="javascript:void(0);"><i className="ficon bx bx-menu"></i></a></li>
           </ul>
           <ul className="nav navbar-nav bookmark-icons">
-            <li className="nav-item d-none d-lg-block"><a className="nav-link" href="app-email.html" data-toggle="tooltip" data-placement="top" title="Email"><i className="ficon bx bx-envelope"></i></a></li>
-            <li className="nav-item d-none d-lg-block"><a className="nav-link" href="app-chat.html" data-toggle="tooltip" data-placement="top" title="Chat"><i className="ficon bx bx-chat"></i></a></li>
-            <li className="nav-item d-none d-lg-block"><a className="nav-link" href="app-todo.html" data-toggle="tooltip" data-placement="top" title="Todo"><i className="ficon bx bx-check-circle"></i></a></li>
-            <li className="nav-item d-none d-lg-block"><a className="nav-link" href="app-calendar.html" data-toggle="tooltip" data-placement="top" title="Calendar"><i className="ficon bx bx-calendar-alt"></i></a></li>
+            <li className="nav-item d-none d-lg-block"><a className="nav-link" title="app-email.html" data-toggle="tooltip" data-placement="top" title="Email"><i className="ficon bx bx-envelope"></i></a></li>
+            <li className="nav-item d-none d-lg-block"><a className="nav-link" title="app-chat.html" data-toggle="tooltip" data-placement="top" title="Chat"><i className="ficon bx bx-chat"></i></a></li>
+            <li className="nav-item d-none d-lg-block"><a className="nav-link" title="app-todo.html" data-toggle="tooltip" data-placement="top" title="Todo"><i className="ficon bx bx-check-circle"></i></a></li>
+            <li className="nav-item d-none d-lg-block"><a className="nav-link" title="app-calendar.html" data-toggle="tooltip" data-placement="top" title="Calendar"><i className="ficon bx bx-calendar-alt"></i></a></li>
           </ul>
           <ul className="nav navbar-nav">
             <li className="nav-item d-none d-lg-block"><a className="nav-link bookmark-star"><i className="ficon bx bx-star warning"></i></a>
@@ -142,8 +142,8 @@ export class Sidebar extends Component {
           </ul>
         </div>
         <ul className="nav navbar-nav float-right">
-          <li className="dropdown dropdown-language nav-item"><a className="dropdown-toggle nav-link" id="dropdown-flag" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="flag-icon flag-icon-us"></i><span className="selected-language">English</span></a>
-            <div className="dropdown-menu" aria-labelledby="dropdown-flag"><a className="dropdown-item" href="javascript:void(0);" data-language="en"><i className="flag-icon flag-icon-us mr-50"></i> English</a><a className="dropdown-item" href="javascript:void(0);" data-language="fr"><i className="flag-icon flag-icon-fr mr-50"></i> French</a><a className="dropdown-item" href="javascript:void(0);" data-language="de"><i className="flag-icon flag-icon-de mr-50"></i> German</a><a className="dropdown-item" href="javascript:void(0);" data-language="pt"><i className="flag-icon flag-icon-pt mr-50"></i> Portuguese</a></div>
+          <li className="dropdown dropdown-language nav-item"><a className="dropdown-toggle nav-link" id="dropdown-flag" title="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="flag-icon flag-icon-us"></i><span className="selected-language">English</span></a>
+            <div className="dropdown-menu" aria-labelledby="dropdown-flag"><a className="dropdown-item" title="javascript:void(0);" data-language="en"><i className="flag-icon flag-icon-us mr-50"></i> English</a><a className="dropdown-item" title="javascript:void(0);" data-language="fr"><i className="flag-icon flag-icon-fr mr-50"></i> French</a><a className="dropdown-item" title="javascript:void(0);" data-language="de"><i className="flag-icon flag-icon-de mr-50"></i> German</a><a className="dropdown-item" title="javascript:void(0);" data-language="pt"><i className="flag-icon flag-icon-pt mr-50"></i> Portuguese</a></div>
           </li>
           <li className="nav-item d-none d-lg-block"><a className="nav-link nav-link-expand"><i className="ficon bx bx-fullscreen"></i></a></li>
           <li className="nav-item nav-search"><a className="nav-link nav-link-search"><i className="ficon bx bx-search"></i></a>
@@ -154,12 +154,12 @@ export class Sidebar extends Component {
               <ul className="search-list"></ul>
             </div>
           </li>
-          <li className="dropdown dropdown-notification nav-item"><a className="nav-link nav-link-label" href="javascript:void(0);" data-toggle="dropdown"><i className="ficon bx bx-bell bx-tada bx-flip-horizontal"></i><span className="badge badge-pill badge-danger badge-up">5</span></a>
+          <li className="dropdown dropdown-notification nav-item"><a className="nav-link nav-link-label" title="javascript:void(0);" data-toggle="dropdown"><i className="ficon bx bx-bell bx-tada bx-flip-horizontal"></i><span className="badge badge-pill badge-danger badge-up">5</span></a>
             <ul className="dropdown-menu dropdown-menu-media dropdown-menu-right">
               <li className="dropdown-menu-header">
                 <div className="dropdown-header px-1 py-75 d-flex justify-content-between"><span className="notification-title">7 new Notification</span><span className="text-bold-400 cursor-pointer">Mark all as read</span></div>
               </li>
-              <li className="scrollable-container media-list"><a className="d-flex justify-content-between" href="javascript:void(0);">
+              <li className="scrollable-container media-list"><a className="d-flex justify-content-between" title="javascript:void(0);">
                   <div className="media d-flex align-items-center">
                     <div className="media-left pr-0">
                       <div className="avatar mr-1 m-0"><img src="app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="39" width="39"/></div>
@@ -167,7 +167,7 @@ export class Sidebar extends Component {
                     <div className="media-body">
                       <h6 className="media-heading"><span className="text-bold-500">Congratulate Socrates Itumay</span> for work anniversaries</h6><small className="notification-text">Mar 15 12:32pm</small>
                     </div>
-                  </div></a><a className="d-flex justify-content-between read-notification cursor-pointer" href="javascript:void(0);">
+                  </div></a><a className="d-flex justify-content-between read-notification cursor-pointer" title="javascript:void(0);">
                   <div className="media d-flex align-items-center">
                     <div className="media-left pr-0">
                       <div className="avatar mr-1 m-0"><img src="app-assets/images/portrait/small/avatar-s-16.jpg" alt="avatar" height="39" width="39"/></div>
@@ -175,7 +175,7 @@ export class Sidebar extends Component {
                     <div className="media-body">
                       <h6 className="media-heading"><span className="text-bold-500">New Message</span> received</h6><small className="notification-text">You have 18 unread messages</small>
                     </div>
-                  </div></a><a className="d-flex justify-content-between cursor-pointer" href="javascript:void(0);">
+                  </div></a><a className="d-flex justify-content-between cursor-pointer" title="javascript:void(0);">
                   <div className="media d-flex align-items-center py-0">
                     <div className="media-left pr-0"><img className="mr-1" src="app-assets/images/icon/sketch-mac-icon.png" alt="avatar" height="39" width="39"/></div>
                     <div className="media-body">
@@ -191,7 +191,7 @@ export class Sidebar extends Component {
                         </div>
                       </div>
                     </div>
-                  </div></a><a className="d-flex justify-content-between cursor-pointer" href="javascript:void(0);">
+                  </div></a><a className="d-flex justify-content-between cursor-pointer" title="javascript:void(0);">
                   <div className="media d-flex align-items-center">
                     <div className="media-left pr-0">
                       <div className="avatar bg-primary bg-lighten-5 mr-1 m-0 p-25"><span className="avatar-content text-primary font-medium-2">LD</span></div>
@@ -199,7 +199,7 @@ export class Sidebar extends Component {
                     <div className="media-body">
                       <h6 className="media-heading"><span className="text-bold-500">New customer</span> is registered</h6><small className="notification-text">1 hrs ago</small>
                     </div>
-                  </div></a><a href="javascript:void(0);">
+                  </div></a><a title="javascript:void(0);">
                   <div className="media d-flex align-items-center justify-content-between">
                     <div className="media-left pr-0">
                       <div className="media-body">
@@ -212,7 +212,7 @@ export class Sidebar extends Component {
                         <label className="custom-control-label" for="notificationSwtich"></label>
                       </div>
                     </div>
-                  </div></a><a className="d-flex justify-content-between cursor-pointer" href="javascript:void(0);">
+                  </div></a><a className="d-flex justify-content-between cursor-pointer" title="javascript:void(0);">
                   <div className="media d-flex align-items-center">
                     <div className="media-left pr-0">
                       <div className="avatar bg-danger bg-lighten-5 mr-1 m-0 p-25"><span className="avatar-content"><i className="bx bxs-heart text-danger"></i></span></div>
@@ -220,7 +220,7 @@ export class Sidebar extends Component {
                     <div className="media-body">
                       <h6 className="media-heading"><span className="text-bold-500">Application</span> has been approved</h6><small className="notification-text">6 hrs ago</small>
                     </div>
-                  </div></a><a className="d-flex justify-content-between read-notification cursor-pointer" href="javascript:void(0);">
+                  </div></a><a className="d-flex justify-content-between read-notification cursor-pointer" title="javascript:void(0);">
                   <div className="media d-flex align-items-center">
                     <div className="media-left pr-0">
                       <div className="avatar mr-1 m-0"><img src="app-assets/images/portrait/small/avatar-s-4.jpg" alt="avatar" height="39" width="39"/></div>
@@ -228,7 +228,7 @@ export class Sidebar extends Component {
                     <div className="media-body">
                       <h6 className="media-heading"><span className="text-bold-500">New file</span> has been uploaded</h6><small className="notification-text">4 hrs ago</small>
                     </div>
-                  </div></a><a className="d-flex justify-content-between cursor-pointer" href="javascript:void(0);">
+                  </div></a><a className="d-flex justify-content-between cursor-pointer" title="javascript:void(0);">
                   <div className="media d-flex align-items-center">
                     <div className="media-left pr-0">
                       <div className="avatar bg-rgba-danger m-0 mr-1 p-25">
@@ -238,7 +238,7 @@ export class Sidebar extends Component {
                     <div className="media-body">
                       <h6 className="media-heading"><span className="text-bold-500">Finance report</span> has been generated</h6><small className="notification-text">25 hrs ago</small>
                     </div>
-                  </div></a><a className="d-flex justify-content-between cursor-pointer" href="javascript:void(0);">
+                  </div></a><a className="d-flex justify-content-between cursor-pointer" title="javascript:void(0);">
                   <div className="media d-flex align-items-center border-0">
                     <div className="media-left pr-0">
                       <div className="avatar mr-1 m-0"><img src="app-assets/images/portrait/small/avatar-s-16.jpg" alt="avatar" height="39" width="39"/></div>
@@ -247,13 +247,13 @@ export class Sidebar extends Component {
                       <h6 className="media-heading"><span className="text-bold-500">New customer</span> comment recieved</h6><small className="notification-text">2 days ago</small>
                     </div>
                   </div></a></li>
-              <li className="dropdown-menu-footer"><a className="dropdown-item p-50 text-primary justify-content-center" href="javascript:void(0)">Read all notifications</a></li>
+              <li className="dropdown-menu-footer"><a className="dropdown-item p-50 text-primary justify-content-center" title="javascript:void(0)">Read all notifications</a></li>
             </ul>
           </li>
-          <li className="dropdown dropdown-user nav-item"><a className="dropdown-toggle nav-link dropdown-user-link" href="javascript:void(0);" data-toggle="dropdown">
+          <li className="dropdown dropdown-user nav-item"><a className="dropdown-toggle nav-link dropdown-user-link" title="javascript:void(0);" data-toggle="dropdown">
               <div className="user-nav d-sm-flex d-none"><span className="user-name">John Doe</span><span className="user-status text-muted">Available</span></div><span><img className="round" src="app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40"/></span></a>
-            <div className="dropdown-menu dropdown-menu-right pb-0"><a className="dropdown-item" href="page-user-profile.html"><i className="bx bx-user mr-50"></i> Edit Profile</a><a className="dropdown-item" href="app-email.html"><i className="bx bx-envelope mr-50"></i> My Inbox</a><a className="dropdown-item" href="app-todo.html"><i className="bx bx-check-square mr-50"></i> Task</a><a className="dropdown-item" href="app-chat.html"><i className="bx bx-message mr-50"></i> Chats</a>
-              <div className="dropdown-divider mb-0"></div><a className="dropdown-item" href="auth-login.html"><i className="bx bx-power-off mr-50"></i> Logout</a>
+            <div className="dropdown-menu dropdown-menu-right pb-0"><a className="dropdown-item" title="page-user-profile.html"><i className="bx bx-user mr-50"></i> Edit Profile</a><a className="dropdown-item" title="app-email.html"><i className="bx bx-envelope mr-50"></i> My Inbox</a><a className="dropdown-item" title="app-todo.html"><i className="bx bx-check-square mr-50"></i> Task</a><a className="dropdown-item" title="app-chat.html"><i className="bx bx-message mr-50"></i> Chats</a>
+              <div className="dropdown-divider mb-0"></div><a className="dropdown-item" ><i className="bx bx-power-off mr-50"></i> Logout</a>
             </div>
           </li>
         </ul>
@@ -266,7 +266,7 @@ export class Sidebar extends Component {
 <div className="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
   <div className="navbar-header">
     <ul className="nav navbar-nav flex-row">
-      <li className="nav-item mr-auto"><a className="navbar-brand" href="index.html">
+      <li className="nav-item mr-auto"><a className="navbar-brand" >
           <div className="brand-logo">
             {/* logo image */}
           </div>
@@ -277,15 +277,16 @@ export class Sidebar extends Component {
   <div className="shadow-bottom"></div>
   <div className="main-menu-content">
     <ul className="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="lines">
-      <li className=" nav-item dash has-sub sidebar-group-active"><a ><span>Dashboard</span></a>
+      <li className=" nav-item dash has-sub sidebar-group-active"><span>Dashboard</span>
       </li>
       <li className=" navigation-header text-truncate"><span data-i18n="Apps">Lists</span>
       </li>
      
-      <li className=" nav-item has-sub"><a href="#"><i className="menu-livicon" data-icon="notebook"></i><span className="menu-title text-truncate" data-i18n="List of category">List of category</span></a>
+      <li className=" nav-item has-sub"><i className="menu-livicon" data-icon="notebook"></i><span className="menu-title text-truncate" data-i18n="List of category">List of category</span>
         <ul className="menu-content">
           <li> 
-            <NavLink to="/dashboard/categories" className="d-flex align-items-center" href=""><i className="bx bx-right-arrow-alt"></i><span className="menu-item text-truncate" data-i18n="Category">Category</span></NavLink>
+            <Link to="/dashboard/categories" className="d-flex align-items-center" ><i className="bx bx-right-arrow-alt"></i><span className="menu-item text-truncate" data-i18n="Category">Category</span>
+            </Link>
           </li>
           <li> 
             <NavLink to="/dashboard/subcategory" className="d-flex align-items-center"><i className="bx bx-right-arrow-alt"></i><span className="menu-item text-truncate" data-i18n="Add Subcategory">Add Subcategory</span></NavLink>
@@ -293,9 +294,9 @@ export class Sidebar extends Component {
         </ul>
       </li>
 
-      <li className=" nav-item has-sub"><a href="#"><i className="menu-livicon" data-icon="notebook"></i><span className="menu-title text-truncate">Product</span></a>
+      <li className=" nav-item has-sub"><a ><i className="menu-livicon" data-icon="notebook"></i><span className="menu-title text-truncate">Product</span></a>
         <ul className="menu-content">
-          <li> <Link to="/dashboard/product" className="d-flex align-items-center" href=""><i className="bx bx-right-arrow-alt"></i><span className="menu-item text-truncate">List Product</span></Link>
+          <li> <Link to="/dashboard/product" className="d-flex align-items-center"><i className="bx bx-right-arrow-alt"></i><span className="menu-item text-truncate">List Product</span></Link>
           </li>
           <li> <Link to="/dashboard/product/create" className="d-flex align-items-center"><i className="bx bx-right-arrow-alt"></i><span className="menu-item text-truncate" >Create Product</span></Link>
           </li>
@@ -324,7 +325,7 @@ export class Sidebar extends Component {
 
 
  <footer className="footer footer-static footer-light">
-  <p className="clearfix mb-0"><span className="float-left d-inline-block">2021 &copy; PIXINVENT</span><span className="float-right d-sm-inline-block d-none">Crafted with<i className="bx bxs-heart pink mx-50 font-small-3"></i>by<a className="text-uppercase" href="https://1.envato.market/pixinvent_portfolio" target="_blank">Pixinvent</a></span>
+  <p className="clearfix mb-0"><span className="float-left d-inline-block">2021 &copy; PIXINVENT</span><span className="float-right d-sm-inline-block d-none">Crafted with<i className="bx bxs-heart pink mx-50 font-small-3"></i>by<a className="text-uppercase" >Pixinvent</a></span>
     <button className="btn btn-primary btn-icon scroll-top" type="button"><i className="bx bx-up-arrow-alt"></i></button>
   </p>
 </footer>
