@@ -5,8 +5,9 @@ import Category from './Category';
 import CreateProduct from './CreateProduct';
 import Dashboard from './Dashboard';
 import SubCategory from './SubCategory';
-import {Route, Switch, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'
 import ListProduct from './ListProduct';
+import RouterDashboard from './RouterAdmin';
 
 export class Sidebar extends Component {
 
@@ -112,7 +113,7 @@ export class Sidebar extends Component {
     render() {
         return (
             <React.Fragment>
-              
+           
 
 
 <div className="header-navbar-shadow"></div>
@@ -281,13 +282,13 @@ export class Sidebar extends Component {
       <li className=" navigation-header text-truncate"><span data-i18n="Apps">Lists</span>
       </li>
      
-      <li className=" nav-item has-sub"><a href="#"><i className="menu-livicon" data-icon="notebook"></i><span className="menu-title text-truncate" data-i18n="Invoice">List of category</span></a>
+      <li className=" nav-item has-sub"><a href="#"><i className="menu-livicon" data-icon="notebook"></i><span className="menu-title text-truncate" data-i18n="List of category">List of category</span></a>
         <ul className="menu-content">
           <li> 
-            <NavLink to="/dashboard/categories" className="d-flex align-items-center" href=""><i className="bx bx-right-arrow-alt"></i><span className="menu-item text-truncate" data-i18n="Invoice List">Category</span></NavLink>
+            <NavLink to="/dashboard/categories" className="d-flex align-items-center" href=""><i className="bx bx-right-arrow-alt"></i><span className="menu-item text-truncate" data-i18n="Category">Category</span></NavLink>
           </li>
           <li> 
-            <NavLink to="/dashboard/subcategory" className="d-flex align-items-center"><i className="bx bx-right-arrow-alt"></i><span className="menu-item text-truncate" data-i18n="Invoice">Add Subcategory</span></NavLink>
+            <NavLink to="/dashboard/subcategory" className="d-flex align-items-center"><i className="bx bx-right-arrow-alt"></i><span className="menu-item text-truncate" data-i18n="Add Subcategory">Add Subcategory</span></NavLink>
           </li>
         </ul>
       </li>
@@ -315,7 +316,6 @@ export class Sidebar extends Component {
           <Route exact path='/dashboard/product'  component = {ListProduct}/>
           <Route exact path='/dashboard/product/create'  component = {CreateProduct}/> 
 </Switch>
-
 
 
 <div className="sidenav-overlay"></div>

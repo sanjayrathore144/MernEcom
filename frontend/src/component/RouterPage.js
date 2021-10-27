@@ -17,25 +17,18 @@ function RouterPage() {
         <React.Fragment>
             
           
-         
+        
             <Header/>
 
                 <Switch>
-                <Route path='/' exact component={Home}/>
-                <Route path='/listofproduct' component={ListProductView}/>
-                <Route path='/productview' component={ProductView}/>
-                <Route path='/cart' component={Cart}/>
-
-
-              
-
-
-
-                
-                
-                
+                <Route exact path='/'  component={Home}/>
+                <Route exact path='/listofproduct' component={ListProductView}/>
+                <Route exact path='/productview' component={ProductView}/>
+                <Route exact path='/cart' component={Cart}/>
                 </Switch>
-                <Footer/>
+
+            <Footer/>
+           
          
            
         </React.Fragment>

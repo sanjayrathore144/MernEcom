@@ -15,7 +15,7 @@ function ListProduct() {
   
       var productList = products.map((pt) => { 
         return  <tr key = {pt._id} > 
-    <td>{pt.srno}</td>
+    {/* <td>{pt.srno}</td> */}
     <td>{pt.title}</td>
     <td>{pt.price}</td>
     <td>{pt.image}</td>

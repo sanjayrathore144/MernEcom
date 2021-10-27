@@ -18,7 +18,7 @@ function CreateProduct() {
     
 
     function setValue(e){
-        e.target.name==="Title" && setTitle(e.target.value);
+        e.target.name==="Titlse" && setTitle(e.target.value);
         e.target.name==="Price" && setPrice(e.target.value);
         e.target.name==="Image" && setImage(e.target.value);
         e.target.name==="Qty" && setQty(e.target.value);
