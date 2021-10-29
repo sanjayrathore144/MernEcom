@@ -26,6 +26,32 @@ Client.connect((err,db)=>{
 })
 
 
+Router.get('/', bodyParser.json() , (req,res)=>{
+    var productdatabase = connection.db('mern_ecom').collection('subcategory');
+    productdatabase.find().toArray((err,docs)=>{
+        if(!err){
+            res.send({status:"OK" , data: docs});
+        }
+        else{
+            res.send({status:"FAILED" , data:err});
+        }
+    })
+});
+
+Router.get('/:id', bodyParser.json() , (req,res)=>{
+    var productdatabase = connection.db('mern_ecom').collection('subcategory');
+    productdatabase.find({_id:ObjectId(req.params.id)}).toArray((err,docs)=>{
+        if(!err)
+        {
+            res.send({status:"ok",data:docs});
+        }
+        else
+        {
+            res.send({status:"failed",data:err});
+        }
+    })
+});
+
 Router.post('/create',bodyParser.json(),(req,res)=>{
     var productdatabase = connection.db('mern_ecom').collection('subcategory');
     console.log("asdas");

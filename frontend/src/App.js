@@ -3,11 +3,7 @@ import './App.css';
 import React from 'react';
 import RouterPage from './component/RouterPage';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import RouterDashboard from './component/admin/RouterAdmin';
-import Category from './component/admin/Category';
-import Sidebar from './component/admin/Sidebar';
-import Dashboard from './component/admin/Dashboard';
-import SubCategory from './component/admin/SubCategory';
+import Sidebar from './component/dashboard/Sidebar';
 
 
 function App() {
@@ -17,8 +13,10 @@ function App() {
       <Router>
            
                 <Switch>
-                <Route  path='/dashboard' component={Sidebar}/>
+                <Route path='/dashboard' component={Sidebar}/>
                 <Route path='/' component={RouterPage}/>
+                
+
                 </Switch>
 
                 
