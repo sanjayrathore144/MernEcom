@@ -6,9 +6,7 @@ import ProductView from './ProductView'
 import Cart from './Cart'
 import Header from './Header'
 import Footer from './Footer'
-import Category from './admin/Category'
-import Sidebar from './admin/Sidebar'
-import Dashboard from './admin/Dashboard'
+
 
 
 
