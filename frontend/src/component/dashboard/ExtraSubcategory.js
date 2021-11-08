@@ -51,12 +51,20 @@ function ExtraSubcategory() {
   
 // for subcategory
 const [subcategoy, setSubcategoy] = useState([]);
-const [categories, setcategories] = useState("");
+const [categories, setcategories] = useState([]);
+const [attr, setattr] = useState([]);
+
 
 
   const handleChangeCourse = event => {
     setcategories(event.target.value);
   };
+
+  const handleChangesubcat = event => {
+    setSubcategoy(event.target.value);
+  };
+
+  
   
   const getUnique = (arr, comp) => {
     const unique = arr
@@ -89,7 +97,6 @@ const [categories, setcategories] = useState("");
     return result.category === categories;
   });
 
-  
 
   
 
@@ -119,7 +126,7 @@ const [categories, setcategories] = useState("");
 
 <div class="form-group">
 <label class="form-label" for="inputcategory">Select SubCategory</label>
-<select class="form-control select2" value={subcategoy} onChange={(e)=>{setValue(e);}}>
+<select class="form-control select2" value={subcategoy}  onChange={handleChangesubcat}>
           {filterDropdown.map(sc => (
               <option key={sc.id} value={sc.subcategory}>
                 {sc.subcategory}
@@ -128,7 +135,16 @@ const [categories, setcategories] = useState("");
           </select>
         </div>
 
+      
 
+        <div class="form-group">
+            <label class="form-label">Attrbute Name</label>
+            <input type="text" id="inputtitle" name="Title" value={title} onChange={(e)=>{setValue(e);}} class="form-control" placeholder="Enter Title"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Unit</label>
+            <input type="text" id="inputprice" name="Price" value={price} onChange={(e)=>{setValue(e);}} class="form-control" placeholder="Enter Price"/>
+          </div>
 
 
        
@@ -208,3 +224,4 @@ const [categories, setcategories] = useState("");
 }
 
 export default ExtraSubcategory
+
