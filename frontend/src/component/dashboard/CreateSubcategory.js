@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import axios from 'axios';
 import $ from 'jquery'; 
 import { produce } from "immer";
-import { generate } from "shortid";
+// import { generate } from "shortid";
 
 
 
@@ -13,7 +13,7 @@ function CreateSubcategory() {
     const [subcategory, setsubcategory] = useState("");
     const [description, setdescription] = useState("");
     const [attribute, setAttribute] = useState([
-        { id: "", attr_name: "", unit: "" }
+        { attr_name: "", unit: "" }
       ]);
 
     function setValue(e){
@@ -25,8 +25,21 @@ function CreateSubcategory() {
     }
 
     function sendData(){
+
+      var optimizedAttributes =  attribute.map(
+            (a)=>{
+               var unitsValues = a.unit.split(",");
+               var trimmedValues =  unitsValues.map((uv)=>{return uv.trim()});
+                return {...a,unit:trimmedValues};
+             })
+
+
+             console.log("37 in createSubcategory");
+             console.log(optimizedAttributes);
+
+
         var s = {
-            category , subcategory , description , attribute
+            category , subcategory , description , attributes:optimizedAttributes
         }
         console.log(s);
         axios.post('http://localhost:3000/subcategory/create', s).then(
@@ -91,7 +104,7 @@ var selectCatList = selectCat.map((u)=> {return (<option key={u.id}>{u.name}</op
           setAttribute(currentAttribute => [
             ...currentAttribute,
             {
-              id: generate(),
+              // id: generate(),
               attr_name: "",
               unit: ""
             }
@@ -102,7 +115,7 @@ var selectCatList = selectCat.map((u)=> {return (<option key={u.id}>{u.name}</op
       </button>
       {attribute.map((p, index) => {
         return (
-          <div key={p.id}>
+          <div key={p.attr_name}>
                <div class="row">
 
                            <div class="col-xs-4 col-sm-4 col-md-4">
@@ -148,7 +161,7 @@ var selectCatList = selectCat.map((u)=> {return (<option key={u.id}>{u.name}</op
             
               onClick={() => {
                 setAttribute(currentAttribute =>
-                    currentAttribute.filter(x => x.id !== p.id)
+                    currentAttribute.filter(x => x.attr_name !== p.attr_name)
                 );
               }}
             >
