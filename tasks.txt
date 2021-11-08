@@ -27,3 +27,14 @@ to Access a User by Id
 
 
 
+
+
+/cart/add-product  post
+
+input = {
+    user_id:
+    product:{
+
+    }
+}
+
