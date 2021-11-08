@@ -17,7 +17,7 @@ function ListSubcategory() {
       var listsubcategoryList = listsubcategory.map((ts) => { 
         return  <tr key = {ts._id} > 
     {/* <td>{ts.srno}</td> */}
-    <td>{ts.title}</td>
+    <td>{ts.category}</td>
     <td>{ts.subcategory}</td>
     <td>{ts.description}</td>
     <td>{ts.attr_name}</td>
@@ -51,7 +51,7 @@ function ListSubcategory() {
                     <th>Category</th>
                     <th>Subcategory</th>
                     <th>Description</th>
-                    <th>Attribute NAme</th>
+                    <th>Attribute Name</th>
                     <th>Unit</th>
                 </tr>
                                     </thead>
@@ -60,7 +60,7 @@ function ListSubcategory() {
                     <th>Category</th>
                     <th>Subcategory</th>
                     <th>Description</th>
-                    <th>Attributes</th>
+                    <th>Attributes Name</th>
                     <th>Unit</th>
                 </tr>
                                     </tfoot>

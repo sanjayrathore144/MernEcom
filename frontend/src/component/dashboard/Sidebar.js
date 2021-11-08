@@ -7,6 +7,8 @@ import CreateProduct from './CreateProduct';
 import ListProduct from './ListProduct';
 import ExtraSubcategory from './ExtraSubcategory';
 import ListSubcategory from './ListSubcategory';
+import Temp from './Temp';
+import Dropdown from './Temp';
 
 export class Sidebar extends Component {
 
@@ -367,6 +369,8 @@ componentDidMount(){
                 <Route exact path='/dashboard/product/create' component = {ExtraSubcategory}/>
           <Route exact path='/dashboard/product'  component = {ListProduct}/>
           {/* <Route exact path='/dashboard/product/create'  component = {CreateProduct}/> */}
+          {/* <Route exact path='/dashboard/product/create' component = {Dropdown}/> */}
+
                 </Switch>
             </div>
            
